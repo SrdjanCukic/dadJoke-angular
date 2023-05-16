@@ -1,0 +1,6 @@
+<input (keyup.enter)="onSearchClick()" [(ngModel)]="searchValue" type="text" id="searchJoke"
+    placeholder="Search a joke :)">
+
+<div class="jokes">
+    <app-jokes-list *ngIf="searchResults.length" [jokes]="searchResults"></app-jokes-list>
+</div>

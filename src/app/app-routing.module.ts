@@ -1,10 +1,27 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { LayoutComponent } from './components/layout/layout.component';
+import { SearchJokesComponent } from './components/search-jokes/search-jokes.component';
+import { RandomJokeComponent } from './components/random-joke/random-joke.component';
+import { SeenJokesComponent } from './components/seen-jokes/seen-jokes.component';
+import { HomeComponent } from './components/home/home.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: '',
+    component: LayoutComponent,
+    children: [
+      { path: 'home', component: HomeComponent },
+      { path: 'search', component: SearchJokesComponent },
+      { path: 'random', component: RandomJokeComponent },
+      { path: 'seen', component: SeenJokesComponent },
+    ],
+  },
+  
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

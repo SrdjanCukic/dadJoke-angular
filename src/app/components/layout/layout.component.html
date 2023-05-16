@@ -1,0 +1,41 @@
+<div class="main-container">
+    <div class="nav-bar-container">
+        <div class="navigation">
+            <ul>
+                <li [routerLinkActive]="'active'" class="list">
+                    <a routerLink="home">
+                        <span class="icon">
+                            <fa-icon [icon]="faHome"></fa-icon>
+                        </span>
+                        <span class="text">Home</span>
+                    </a>
+                </li>
+                <li [routerLinkActive]="'active'" class="list">
+                    <a routerLink="random">
+                        <span class="icon">
+                            <fa-icon [icon]="faShuffle"></fa-icon>
+                        </span>
+                        <span class="text">Random Joke</span>
+                    </a>
+                </li>
+                <li [routerLinkActive]="'active'" class="list">
+                    <a routerLink="search">
+                        <span class="icon"><fa-icon [icon]="faMagnifyingGlass"></fa-icon></span>
+                        <span class="text">Search Jokes</span>
+                    </a>
+                </li>
+                <li [routerLinkActive]="'active'" class="list">
+                    <a routerLink="seen">
+                        <span class="icon"><fa-icon [icon]="faSnowplow"></fa-icon></span>
+                        <span class="text">Seen Jokes</span>
+                    </a>
+                </li>
+                <div class="indicator"></div>
+            </ul>
+        </div>
+
+    </div>
+    <div class="content-container">
+        <router-outlet></router-outlet>
+    </div>
+</div>

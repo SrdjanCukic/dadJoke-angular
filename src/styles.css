@@ -1,1 +1,47 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-image: url("../src/assets/lukas-blazek-EWDvHNNfUmQ-unsplash.jpg");
+  background-size: cover;
+  min-height: 100vh;
+}
+
+:root {
+  --clr: (#222327);
+  
+}
+
+.main-container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-bar-container {
+  height: 20%;
+  width: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.content-container {
+  height: 80%;
+  width: 100%;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(120, 75%, 50% / 1);
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(120, 75%, 50% / 1);
+}

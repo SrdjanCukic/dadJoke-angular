@@ -1,0 +1,9 @@
+<div class="seen-container">
+    <ul class="list">
+        <li *ngFor="let seenJokes of seenJokes">
+            <app-joke-card [jokeItem]="seenJokes"></app-joke-card>
+        </li>
+    </ul>
+
+</div>
+<button class="btn" (click)="clearSeenJokes()">Clear Seen Jokes</button>
