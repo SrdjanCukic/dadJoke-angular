@@ -16,7 +16,6 @@ import { SeenJokesComponent } from './components/seen-jokes/seen-jokes.component
 import { HomeComponent } from './components/home/home.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,9 +34,9 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     HttpClientModule,
     BrowserAnimationsModule,
     FormsModule,
-    MatPaginatorModule
+    MatPaginatorModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

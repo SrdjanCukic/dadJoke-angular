@@ -11,6 +11,7 @@ export class SearchJokesComponent {
   searchResults: JokeType[] = [];
   searchValue = '';
   errorMessage = '';
+  condition = true;
 
   constructor(private jokesService: JokesService) {}
 
@@ -18,9 +19,13 @@ export class SearchJokesComponent {
     this.jokesService.getDataSearch(this.searchValue).subscribe({
       next: (jokes) => {
         this.searchResults = jokes;
-        console.log(jokes);
+        if (jokes.length) {
+          this.condition = true;
+        } else {
+          this.condition = false;
+        }
       },
       error: (err) => (this.errorMessage = err),
     });
-  };
+  }
 }

@@ -1,6 +1,9 @@
 <input (keyup.enter)="onSearchClick()" [(ngModel)]="searchValue" type="text" id="searchJoke"
     placeholder="Search a joke :)">
 
-<div class="jokes">
-    <app-jokes-list *ngIf="searchResults.length" [jokes]="searchResults"></app-jokes-list>
-</div>
+<div class="jokes" *ngIf="condition; then trueCondition else falseCondition"></div>
+
+<ng-template #trueCondition><app-jokes-list [jokes]="searchResults"></app-jokes-list></ng-template>
+<ng-template #falseCondition>
+    <div class="no-jokes-msg">There is no joke`s with that search parameter`s, try something else :)</div>
+</ng-template>

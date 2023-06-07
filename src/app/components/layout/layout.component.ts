@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import {
   faShuffle,
   faMagnifyingGlass,
@@ -15,5 +15,14 @@ export class LayoutComponent {
   faShuffle = faShuffle;
   faMagnifyingGlass = faMagnifyingGlass;
   faSnowplow = faSnowplow;
-  faHome = faHome; 
+  faHome = faHome;
+  navbarfixed:boolean = false;
+
+  @HostListener('window:scroll',['$event']) onscroll(): void {
+    if(window.scrollY > 50) {
+      this.navbarfixed = true;
+    } else {
+      this.navbarfixed = false;
+    };
+  };
 }

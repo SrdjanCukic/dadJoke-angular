@@ -22,7 +22,7 @@ export class JokesService {
 
   getData() {
     return this.http.get<JokeType>(this.dataUrl, this.httpOptions).pipe(
-      tap((data) => console.log(JSON.stringify(data))),
+      tap((data) => (JSON.stringify(data))),
       catchError(this.handleError)
     );
   }
@@ -35,7 +35,7 @@ export class JokesService {
       )
       .pipe(
         map((data) => data.results),
-        tap((data) => console.log(JSON.stringify(data))),
+        tap((data) => (JSON.stringify(data))),
         catchError(this.handleError)
       );
   }

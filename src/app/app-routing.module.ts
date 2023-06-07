@@ -11,13 +11,13 @@ const routes: Routes = [
     path: '',
     component: LayoutComponent,
     children: [
-      { path: 'home', component: HomeComponent },
+      { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'search', component: SearchJokesComponent },
       { path: 'random', component: RandomJokeComponent },
       { path: 'seen', component: SeenJokesComponent },
+      // { path: '', redirectTo: '/home' },
     ],
   },
-  
 ];
 
 @NgModule({

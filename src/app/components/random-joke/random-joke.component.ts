@@ -30,7 +30,7 @@ export class RandomJokeComponent {
 
   ngOnInit(): void {
     this.onRandomClick();
-  };
+  }
 
   onRandomClick() {
     this.jokesService.getData().subscribe({

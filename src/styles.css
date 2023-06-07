@@ -6,19 +6,18 @@
 }
 
 body {
-  background-image: url("../src/assets/lukas-blazek-EWDvHNNfUmQ-unsplash.jpg");
+  background-image: url("../src/assets/tareq-ajalyakin-72aEtYlS5K0-unsplash.jpg");
   background-size: cover;
+  background-attachment: fixed;
   min-height: 100vh;
+  overflow: overlay;
 }
 
 :root {
   --clr: (#222327);
-  
 }
 
 .main-container {
-  height: 100vh;
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,7 +25,6 @@ body {
 }
 
 .nav-bar-container {
-  height: 20%;
   width: 320px;
   display: flex;
   align-items: center;
@@ -35,13 +33,29 @@ body {
 }
 
 .content-container {
-  height: 80%;
-  width: 100%;
+  padding: 0;
+}
+
+::-webkit-scrollbar {
+  background-color: transparent;
+  width: 12px;
+  border-radius: 10px;
+ 
 }
 
 ::-webkit-scrollbar-track {
-  background: hsl(120, 75%, 50% / 1);
+  background-color: transparent;
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.3);
 }
+
 ::-webkit-scrollbar-thumb {
-  background: hsl(120, 75%, 50% / 1);
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.5, #a520ca),
+    color-stop(1, #2681cc)
+  );
+  border-radius: 10px;
 }

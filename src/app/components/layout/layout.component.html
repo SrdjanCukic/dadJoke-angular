@@ -1,9 +1,9 @@
 <div class="main-container">
     <div class="nav-bar-container">
-        <div class="navigation">
+        <div class="navigation" (scroll)="onscroll()" [ngClass]="navbarfixed?'fixed':'nofixed'">
             <ul>
-                <li [routerLinkActive]="'active'" class="list">
-                    <a routerLink="home">
+                <li [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}" class="list">
+                    <a routerLink="">
                         <span class="icon">
                             <fa-icon [icon]="faHome"></fa-icon>
                         </span>

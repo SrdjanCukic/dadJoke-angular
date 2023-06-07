@@ -4,25 +4,43 @@
   justify-content: center;
 }
 
+.fixed {
+  position: fixed;
+  width: inherit;
+  transition: 0.6s linear;
+  top: 0px;
+  background-color: #c5c6c7;
+}
+.nofixed {
+  position: static;
+  transition: 0.4s linear;
+  top: -50px;
+  z-index: 5000;
+  
+}
+
 .navigation {
-  width: 320px;
-  height: 70px;
+  min-width: 320px;
+  min-height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 2.5rem;
+  
 }
 
 .navigation ul {
   display: flex;
-  width: 280px;
+  min-width: 280px;
 }
 
 .navigation ul li {
   position: relative;
   list-style: none;
-  width: 70px;
-  height: 70px;
+  min-width: 70px;
+  min-height: 70px;
   z-index: 1;
 }
 
@@ -44,7 +62,7 @@
   font-size: 2.5em;
   text-align: center;
   transition: 0.5s;
-  color: rgb(71, 129, 167);
+  color:#45a29e;
 }
 
 .navigation ul li.active a .icon {
@@ -53,7 +71,7 @@
 
 .navigation ul li a .text {
   position: absolute;
-  color: rgb(9, 57, 88);
+  color: #45a29e;
   font-weight: 600;
   font-size: 1em;
   letter-spacing: 0.05em;
