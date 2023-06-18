@@ -2,7 +2,7 @@ import { Component, HostListener } from '@angular/core';
 import {
   faShuffle,
   faMagnifyingGlass,
-  faSnowplow,
+  faClockRotateLeft,
   faHome,
 } from '@fortawesome/free-solid-svg-icons';
 
@@ -14,15 +14,15 @@ import {
 export class LayoutComponent {
   faShuffle = faShuffle;
   faMagnifyingGlass = faMagnifyingGlass;
-  faSnowplow = faSnowplow;
+  faClockRotateLeft = faClockRotateLeft;
   faHome = faHome;
-  navbarfixed:boolean = false;
+  navbarfixed: boolean = false;
 
-  @HostListener('window:scroll',['$event']) onscroll(): void {
-    if(window.scrollY > 50) {
+  @HostListener('window:scroll', ['$event']) onscroll(): void {
+    if (window.scrollY > 50) {
       this.navbarfixed = true;
     } else {
       this.navbarfixed = false;
-    };
-  };
+    }
+  }
 }

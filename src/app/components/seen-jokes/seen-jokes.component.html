@@ -1,13 +1,18 @@
+<button class="btn" (click)="clearSeenJokes()" [ngClass]="!condition?'display-none':'display-block'">
+    Clear Seen Jokes
+</button>
 <div class="seen-container">
     <ul class="list">
         <li *ngFor="let seenJokes of seenJokes">
             <app-joke-card [jokeItem]="seenJokes"></app-joke-card>
         </li>
     </ul>
-
 </div>
-<button class="btn" (click)="clearSeenJokes()" [ngClass]="!condition?'display-none':'display-block'">Clear Seen
-    Jokes</button>
 <div class="no-jokes-msg" [ngClass]="condition?'display-none':'display-block'">
-    <h1>There is no seens and laughed joke`s ;), check some on random joke`s or search your favorites.</h1>
+    <h1>Check some jokes for some good laugh :)</h1>
+</div>
+<div class="toast-container" [ngClass]="toastCondition?'active':''">
+    <div class="toast">
+        List clear!
+    </div>
 </div>

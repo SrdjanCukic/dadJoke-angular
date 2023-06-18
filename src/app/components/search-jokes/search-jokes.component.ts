@@ -12,10 +12,11 @@ export class SearchJokesComponent {
   searchValue = '';
   errorMessage = '';
   condition = true;
+  toastCondition: boolean = false;
 
   constructor(private jokesService: JokesService) {}
 
-  onSearchClick() {
+  onSearch() {
     this.jokesService.getDataSearch(this.searchValue).subscribe({
       next: (jokes) => {
         this.searchResults = jokes;
@@ -23,9 +24,17 @@ export class SearchJokesComponent {
           this.condition = true;
         } else {
           this.condition = false;
+          this.toast();
         }
       },
       error: (err) => (this.errorMessage = err),
     });
+  }
+
+  toast() {
+    this.toastCondition = true;
+    setTimeout(() => {
+      this.toastCondition = false;
+    }, 2000);
   }
 }

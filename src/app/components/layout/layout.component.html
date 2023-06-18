@@ -1,5 +1,5 @@
 <div class="main-container">
-    <div class="nav-bar-container">
+    <div class="nav-bar-container" style="height: 6.25rem; margin-top: 1.25rem;">
         <div class="navigation" (scroll)="onscroll()" [ngClass]="navbarfixed?'fixed':'nofixed'">
             <ul>
                 <li [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}" class="list">
@@ -26,7 +26,7 @@
                 </li>
                 <li [routerLinkActive]="'active'" class="list">
                     <a routerLink="seen">
-                        <span class="icon"><fa-icon [icon]="faSnowplow"></fa-icon></span>
+                        <span class="icon"><fa-icon [icon]="faClockRotateLeft"></fa-icon></span>
                         <span class="text">Seen Jokes</span>
                     </a>
                 </li>

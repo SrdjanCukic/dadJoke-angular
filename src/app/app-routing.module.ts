@@ -15,7 +15,6 @@ const routes: Routes = [
       { path: 'search', component: SearchJokesComponent },
       { path: 'random', component: RandomJokeComponent },
       { path: 'seen', component: SeenJokesComponent },
-      // { path: '', redirectTo: '/home' },
     ],
   },
 ];

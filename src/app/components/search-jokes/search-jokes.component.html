@@ -1,4 +1,4 @@
-<input (keyup.enter)="onSearchClick()" [(ngModel)]="searchValue" type="text" id="searchJoke"
+<input (keyup.enter)="onSearch()" [(ngModel)]="searchValue" type="text" id="searchJoke"
     placeholder="Search a joke :)">
 
 <div class="jokes" *ngIf="condition; then trueCondition else falseCondition"></div>
@@ -7,3 +7,8 @@
 <ng-template #falseCondition>
     <div class="no-jokes-msg">There is no joke`s with that search parameter`s, try something else :)</div>
 </ng-template>
+<div class="toast-container" [ngClass]="toastCondition?'active':''">
+    <div class="toast">
+        No match!
+    </div>
+</div>

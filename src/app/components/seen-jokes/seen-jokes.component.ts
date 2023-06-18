@@ -7,8 +7,12 @@ import { STORAGE_KEYS } from 'src/utils/constants';
   styleUrls: ['./seen-jokes.component.css'],
 })
 export class SeenJokesComponent {
-  seenJokes:any = [];
-  condition:boolean = false;
+  seenJokes: any = [];
+  condition: boolean = false;
+  toastCondition: boolean = false;
+
+  constructor() {}
+
   getSeenJokes() {
     const storedJokes = localStorage.getItem(STORAGE_KEYS.seenJokes);
     if (storedJokes) {
@@ -22,9 +26,17 @@ export class SeenJokesComponent {
     localStorage.clear();
     this.seenJokes = [];
     this.condition = false;
+    this.toast();
   }
 
   ngOnInit(): void {
     this.getSeenJokes();
+  }
+
+  toast() {    
+    this.toastCondition = true;
+    setTimeout(() =>{
+      this.toastCondition =false;
+    }, 2000);
   }
 }
